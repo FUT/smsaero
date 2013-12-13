@@ -6,8 +6,7 @@ Gem::Specification.new do |s|
   s.description = "API for smsaero integration."
   s.authors     = ["Yury Kaliada"]
   s.email       = 'fut.wrk@gmail.com'
-  s.files       = ["lib/hola.rb"]
-  s.homepage    =
-    'http://rubygems.org/gems/hola'
-  s.license       = 'MIT'
+  s.files       = Dir['README.md', 'lib/**/*']
+  s.homepage    = 'http://rubygems.org/gems/smsaero'
+  s.license     = 'MIT'
 end
