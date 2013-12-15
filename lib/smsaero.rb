@@ -35,7 +35,8 @@ class SMSAero
     uri = URI(URL % { action: action})
     uri.query = URI.encode_www_form options
 
-    Net::HTTP.get(uri)
+    result = Net::HTTP.get(uri)
+    JSON.parse(result)
   end
 
 end
