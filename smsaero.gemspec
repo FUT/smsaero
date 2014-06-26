@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'smsaero'
-  s.version     = '0.1.1'
-  s.date        = '2013-12-13'
+  s.version     = '0.2.0'
+  s.date        = '2014-06-26'
   s.summary     = "API for smsaero integration."
   s.description = "API for smsaero integration."
   s.authors     = ["Yury Kaliada", 'Valentine Zavadsky']
