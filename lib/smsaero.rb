@@ -12,8 +12,15 @@ class SMSAero
     @password_hash = Digest::MD5.hexdigest(options[:password])
   end
 
-  def method_missing(action, *args, &block)
+  def send_message(options={})
+    process_request :send, options
+  end
 
+  def method_missing(action, *args, &block)
+    process_request(action, *args, &block)
+  end
+
+  def process_request(action, *args, &block)
     options = args.extract_options!
     options.reverse_merge! answer: :json
 
@@ -23,5 +30,4 @@ class SMSAero
     result = Net::HTTP.post_form uri, user: @user, password: @password_hash
     JSON.parse(result.body)
   end
-
 end
